@@ -7,5 +7,5 @@ cd ~/workspace/home_api
 docker-compose down
 git pull
 docker-compose build
-docker-compose up -d
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 EOS

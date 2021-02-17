@@ -9,4 +9,3 @@ services:
       - .:/app
     env_file:
       - .env
-    restart: always
