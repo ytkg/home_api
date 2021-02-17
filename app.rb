@@ -2,10 +2,6 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'nature_remo_api'
 
-get '/' do
-  'Hello, World!!'
-end
-
 get '/:device/:switch' do |d, s|
   send("#{d}_#{s}")
   "OK.\n"
