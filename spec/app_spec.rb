@@ -10,7 +10,7 @@ RSpec.describe 'app' do
   end
 
   it '/light/on' do
-    get '/light/on'
+    post '/light/on'
 
     expect(last_response.status).to eq 200
     expect(last_response.body).to eq "OK.\n"
@@ -18,7 +18,7 @@ RSpec.describe 'app' do
   end
 
   it '/light/off' do
-    get '/light/off'
+    post '/light/off'
 
     expect(last_response.status).to eq 200
     expect(last_response.body).to eq "OK.\n"
@@ -26,7 +26,7 @@ RSpec.describe 'app' do
   end
 
   it '/router/reboot' do
-    get '/router/reboot'
+    post '/router/reboot'
 
     expect(last_response.status).to eq 200
     expect(last_response.body).to eq "OK.\n"

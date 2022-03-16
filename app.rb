@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'switchbot'
 
-get '/:device/:switch' do |d, s|
+post '/:device/:switch' do |d, s|
   send("#{d}_#{s}")
   "OK.\n"
 rescue => e
