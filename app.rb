@@ -1,6 +1,17 @@
 require 'sinatra'
+require 'sinatra/json'
 require 'sinatra/reloader'
+require 'nature_remo_e'
 require 'switchbot'
+
+get '/nature_remo_e/measured_instantaneous' do
+  client = NatureRemoE::Client.new(ENV['NATURE_REMO_API_TOKEN'])
+  data = { value: client.measured_instantaneous }
+  json data
+rescue NatureRemoE::Error => e
+  data = { value: e.message }.to_json
+  json data
+end
 
 post '/:device/:switch' do |d, s|
   send("#{d}_#{s}")
