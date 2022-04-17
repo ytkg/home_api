@@ -4,6 +4,10 @@ require 'sinatra/reloader'
 require 'nature_remo_e'
 require 'switchbot'
 
+before do
+  response.headers['Access-Control-Allow-Origin'] = '*'
+end
+
 get '/nature_remo_e/measured_instantaneous' do
   client = NatureRemoE::Client.new(ENV['NATURE_REMO_API_TOKEN'])
   data = { value: client.measured_instantaneous }
