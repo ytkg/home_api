@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/json'
 require 'sinatra/reloader'
+require 'sinatra/activerecord'
 require 'nature_remo_e'
 require 'switchbot'
 
