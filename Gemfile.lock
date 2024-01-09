@@ -18,16 +18,22 @@ GEM
       mutex_m
       tzinfo (~> 2.0)
     base64 (0.2.0)
-    bigdecimal (3.1.4)
+    bigdecimal (3.1.5)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     diff-lcs (1.5.0)
     drb (2.2.0)
       ruby2_keywords
-    faraday (2.3.0)
-      faraday-net_http (~> 2.0)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.3)
+    ethon (0.16.0)
+      ffi (>= 1.15.0)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
+    faraday-typhoeus (1.1.0)
+      faraday (~> 2.0)
+      typhoeus (~> 1.4)
+    ffi (1.16.3)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     mini_portile2 (2.8.5)
@@ -39,6 +45,8 @@ GEM
     nature_remo_e (2.0.0)
       faraday (>= 2.0.0)
       thor
+    net-http (0.4.1)
+      uri
     nio4r (2.7.0)
     puma (6.4.1)
       nio4r (~> 2.0)
@@ -79,14 +87,18 @@ GEM
       tilt (~> 2.0)
     sqlite3 (1.7.0)
       mini_portile2 (~> 2.8.0)
-    switchbot (0.6.0)
+    switchbot (0.8.0)
       activesupport
       faraday (>= 2.0.0)
+      faraday-typhoeus
     thor (1.2.1)
     tilt (2.3.0)
     timeout (0.4.1)
+    typhoeus (1.4.1)
+      ethon (>= 0.9.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.13.0)
 
 PLATFORMS
   ruby
@@ -107,4 +119,4 @@ RUBY VERSION
    ruby 3.3.0p0
 
 BUNDLED WITH
-   2.5.4
+   2.5.3

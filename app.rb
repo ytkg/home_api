@@ -26,7 +26,7 @@ rescue => e
 end
 
 def client
-  Switchbot::Client.new(ENV['SWITCHBOT_API_TOKEN'])
+  Switchbot::Client.new(ENV['SWITCHBOT_API_TOKEN'], ENV['SWITCHBOT_API_SECRET'])
 end
 
 def light_on

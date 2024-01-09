@@ -22,7 +22,7 @@ RSpec.describe 'app' do
 
     expect(last_response.status).to eq 200
     expect(last_response.body).to eq "OK.\n"
-    expect(Switchbot::Client.new(anything).device(anything)).to have_received(:on).once
+    expect(Switchbot::Client.new(anything, anything).device(anything)).to have_received(:on).once
   end
 
   it '/light/off' do
@@ -30,7 +30,7 @@ RSpec.describe 'app' do
 
     expect(last_response.status).to eq 200
     expect(last_response.body).to eq "OK.\n"
-    expect(Switchbot::Client.new(anything).device(anything)).to have_received(:off).once
+    expect(Switchbot::Client.new(anything, anything).device(anything)).to have_received(:off).once
   end
 
   it '/router/reboot' do
