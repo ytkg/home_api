@@ -47,8 +47,8 @@ GEM
       thor
     net-http (0.4.1)
       uri
-    nio4r (2.7.0)
-    puma (6.4.2)
+    nio4r (2.7.4)
+    puma (6.4.3)
       nio4r (~> 2.0)
     rack (3.0.9.1)
     rack-protection (4.0.0)
